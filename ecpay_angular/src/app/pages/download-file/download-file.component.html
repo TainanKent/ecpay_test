@@ -1,0 +1,50 @@
+<!-- <form id="theForm" action="https://vendor-stage.ecpay.com.tw/PaymentMedia/TradeNoAio" method="POST" name="payment">
+  <div class="flex flex-column gap-2">
+    <div>
+        <span class="inline-block w-2">特店編號(MerchantID): </span>
+        <input pInputText name="MerchantID" [(ngModel)]="info.MerchantID" />
+    </div>
+    <div>
+      <span class="inline-block w-2">查詢日期類別(DateType): </span>
+      <input pInputText name="DateType" [(ngModel)]="info.DateType" />
+    </div>
+    <div>
+      <span class="inline-block w-2">查詢開始日期(BeginDat): </span>
+      <input pInputText name="BeginDate" [(ngModel)]="info.BeginDate" />
+    </div>
+    <div>
+      <span class="inline-block w-2">查詢結束日期(EndDate): </span>
+      <input pInputText name="EndDate" [(ngModel)]="info.EndDate" />
+    </div>
+    <div>
+      <span class="inline-block w-2">CSV格式(MediaFormated): </span>
+      <input pInputText name="MediaFormated" [(ngModel)]="info.MediaFormated" />
+    </div>
+    <div>
+      <span class="inline-block w-2">CheckMacValue: </span>
+      <input pInputText name="CheckMacValue" [(ngModel)]="CheckMacValue" />
+    </div>
+  </div>
+
+  <div class="card flex justify-center mt-5">
+      <p-button label="Submit"  (click)="sendForm()" />
+  </div>
+</form> -->
+
+<div>
+  開始日期: <p-datepicker [(ngModel)]="info.BeginDate" />
+</div>
+<div>
+  結束日期: <p-datepicker [(ngModel)]="info.EndDate" />
+</div>
+
+
+<div class="card flex justify-center mt-5">
+  <p-button label="下載"  (click)="getFile()" />
+</div>
+<div class='mt-5'>
+  CSV 資料
+</div>
+<div>
+  {{ csvText }}
+</div>

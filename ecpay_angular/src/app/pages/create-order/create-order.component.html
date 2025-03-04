@@ -1,0 +1,52 @@
+  <form id="theForm" action="https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5" method="POST" name="payment">
+    <div class="flex flex-column gap-2">
+      <div>
+          <span class="inline-block w-2">特店編號(MerchantID): </span>
+          <input pInputText name="MerchantID" [(ngModel)]="ecpaydata.MerchantID" />
+      </div>
+      <div>
+        <span class="inline-block w-2">特店訂單編號(MerchantTradeNo): </span>
+        <input pInputText name="MerchantTradeNo" [(ngModel)]="ecpaydata.MerchantTradeNo" />
+      </div>
+      <div>
+        <span class="inline-block w-2">特店交易時間(MerchantTradeDate): </span>
+        <input pInputText name="MerchantTradeDate" [(ngModel)]="ecpaydata.MerchantTradeDate" />
+      </div>
+      <div>
+        <span class="inline-block w-2">交易類型(PaymentType): </span>
+        <input pInputText name="PaymentType" [(ngModel)]="ecpaydata.PaymentType" />
+      </div>
+      <div>
+        <span class="inline-block w-2">交易金額(TotalAmount): </span>
+        <p-inputnumber [useGrouping]="false" name="TotalAmount" [(ngModel)]="ecpaydata.TotalAmount" />
+      </div>
+      <div>
+        <span class="inline-block w-2">交易描述(TradeDesc): </span>
+        <input pInputText name="TradeDesc" [(ngModel)]="ecpaydata.TradeDesc" />
+      </div>
+      <div>
+        <span class="inline-block w-2">商品名稱(ItemName): </span>
+        <input pInputText name="ItemName" [(ngModel)]="ecpaydata.ItemName" />
+      </div>
+      <div>
+        <span class="inline-block w-2">付款完成通知回傳網址(ReturnURL): </span>
+        <input pInputText name="ReturnURL" [(ngModel)]="ecpaydata.ReturnURL" />
+      </div>
+      <div>
+        <span class="inline-block w-2">選擇預設付款方式(ChoosePayment): </span>
+        <input pInputText name="ChoosePayment" [(ngModel)]="ecpaydata.ChoosePayment" />
+      </div>
+      <div>
+        <span class="inline-block w-2">加密類型(EncryptType): </span>
+        <p-inputnumber name="EncryptType" [(ngModel)]="ecpaydata.EncryptType" />
+      </div>     
+      <div>
+        <span class="inline-block w-2">檢查碼(CheckMacValue): </span>
+        <input pInputText name="CheckMacValue" [(ngModel)]="CheckMacValue" />
+      </div>
+    </div>
+
+    <div class="card flex justify-center mt-5">
+        <p-button label="Submit"  (click)="sendForm()" />
+    </div>
+  </form>

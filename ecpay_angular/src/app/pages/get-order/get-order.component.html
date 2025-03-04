@@ -1,0 +1,46 @@
+<p-button label="Tsss1740637541889" (onClick)="getOrderData('Tsss1740637541889')"></p-button>
+
+<div class="mt-5">
+  Order info Data
+</div>
+
+<div class="mt-5 flex w-full">
+  <div class="flex flex-column gap-2 w-full">
+    <div>
+        <span class="inline-block w-2">特店編號(MerchantID): </span>
+        <input pInputText name="MerchantID" [(ngModel)]="orderInfo.MerchantID" />
+    </div>
+    <div>
+      <span class="inline-block w-2">特店訂單編號(MerchantTradeNo): </span>
+      <input pInputText name="MerchantTradeNo" [(ngModel)]="orderInfo.MerchantTradeNo" />
+    </div>
+    <div>
+      <span class="inline-block w-2">付款時間(PaymentDate): </span>
+      <input pInputText name="PaymentDate" [(ngModel)]="orderInfo.PaymentDate" />
+    </div>
+    <div>
+      <span class="inline-block w-2">交易類型(PaymentType): </span>
+      <input pInputText name="PaymentType" [(ngModel)]="orderInfo.PaymentType" />
+    </div>
+    <div>
+      <span class="inline-block w-2">交易金額(TotalAmount): </span>
+      <input pInputText name="TradeAmt" [(ngModel)]="orderInfo.TradeAmt" />
+    </div>
+    <div>
+      <span class="inline-block w-2">訂單成立時間(TradeDate): </span>
+      <input pInputText name="TradeDate" [(ngModel)]="orderInfo.TradeDate" />
+    </div>
+    <div>
+      <span class="inline-block w-2">商品名稱(ItemName): </span>
+      <input pInputText name="ItemName" [(ngModel)]="orderInfo.ItemName" />
+    </div>
+    <div>
+      <span class="inline-block w-2">交易手續費金額(PaymentTypeChargeFee): </span>
+      <input pInputText name="PaymentTypeChargeFee" [(ngModel)]="orderInfo.PaymentTypeChargeFee" />
+    </div>
+    <div>
+      <span class="inline-block w-2">交易狀態(TradeStatus): </span>
+      <input pInputText name="TradeStatus" [(ngModel)]="orderInfo.TradeStatus" />
+    </div>
+  </div>
+</div>
